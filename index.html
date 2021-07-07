@@ -15,9 +15,8 @@
             const url_addr = '/data/data.txt';
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url_addr);
-            xhr.responseType = 'json';
             xhr.send();
-            var js_feeds = xhr.response;
+            var js_feeds = JSON.parse(xhr.responseText);
             document.getElementById('rss_feeds').innerHTML = String(js_feeds.title[0]);
         };
 
