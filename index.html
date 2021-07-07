@@ -18,7 +18,11 @@
             xhr.responseType = 'json';
             xhr.send();
             var js_feeds = xhr.response;
-            console.log(js_feegs.size)
+            var html_code='';
+            for(var i=0; i<js_feeds.size; i++){
+                html_code += '<h3>' + js_feeds.title[i] + '</h3><br>';   
+            }
+            document.getElementById('rss_feeds').innerHTML = html_code;
         };
 
 
@@ -48,7 +52,9 @@
 
         </style>
 
-        <p id="rss_list"></p>
+        <div id="rss_feeds"> 
+      
+        </div>
 
         <header>
             <img src="logo.jpg" width="150px" height="150px" style="float:left;">
