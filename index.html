@@ -20,7 +20,7 @@
             var js_feeds = xhr.response;
             var html_code='';
             for(var i=0; i<3; i++){
-                html_code += '<h3>' + js_feeds.title[i] + '</h3><br>';   
+                html_code += '<h3>' + String(js_feeds.title[i]) + '</h3><br>';   
             }
             document.getElementById('rss_feeds').innerHTML = html_code;
         };
