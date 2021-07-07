@@ -16,7 +16,7 @@
             xhr.responseType = 'json';
             xhr.open('GET', url_addr);
             xhr.onload = function() {
-                var js = xhr.response;                
+                var js = JSON(xhr.response);                
                 document.getElementById('rss_feeds').innerHTML = js.title[0];
             };
             xhr.send(null);
