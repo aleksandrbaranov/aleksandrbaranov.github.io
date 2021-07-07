@@ -12,15 +12,13 @@
         <script>    
         function load_rss(){
             
-            const url_addr = '/nw.xml';
+            const url_addr = '/data/data.txt';
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url_addr);
+            xhr.responseType = 'json';
             xhr.send();
-            
-            var xmlDoc = xhr.responseXML;
-            var txt = "";
-            var rss = xmlDoc.getElementsByTagName("rss");
-            document.write(rss.getElementsByTagName('chanel'));
+            var js_feeds = xhr.response;
+            console.log(js_feegs.size)
         };
 
 
