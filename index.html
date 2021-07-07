@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Юридическая помощь</title>
+        <link rel="icon" href="logo.jpg">
+        <link name="Keywords", content="Юрист, адвокат, помощь, консультация">
+    </head>
+
+    <body style="background-color: oldlace;">
+        
+        <script>    
+        function load_rss(){
+            const url_addr = 'nw.xml';
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url_addr);
+            xhr.send();
+            console.log(xhr.responseXML);
+        };
+
+
+        window.onload = function (){
+            load_rss();
+        };
+
+    </script>
+
+        <style>
+            header {
+                width: 100%;
+                height: 150px;
+                background-color: #244065;
+                color:mintcream;
+                font-size: 24px;
+            }    
+
+            .list_name {
+                color: #244065;
+                font-size: 36px;
+            }
+
+            .item_name {
+                font-size: 18px;
+            }
+
+        </style>
+
+        <p id="rss_list"></p>
+
+        <header>
+            <img src="logo.jpg" width="150px" height="150px" style="float:left;">
+            <br>
+            <h1>Юридическая помощь</h1>
+        </header>
+
+        <br>
+
+
+        <br><br><br><br> 
+
+        <details open>
+            <summary class="list_name">Для физических лиц</summary>
+            <ul class="item_name">
+                <li>Представительство в суде</li>
+                <li>Споры о ДТП</li>
+                <li>Составление и анализ договоров</li>
+                <li>Споры с государственными органами</li>
+                <li>Трудовые споры</li>
+                <li>Административные дела</li>
+                <li>Жилищные споры</li>
+                <li>Взыскание долгов</li>
+                <li>Составление претензий</li>
+            </ul>      
+        </details>
+
+        <details open>
+            <summary class="list_name">Для юридических лиц</summary>
+            <ul class="item_name">
+                <li>Комплексное сопровождение бизнеса</li>
+                <li>Банкротство</li>
+                <li>Налоговые споры</li>
+                <li>Регистрация юридического лица</li>
+                <li>Регистрация товарных знаков</li>
+                <li>Купля-Продажа бизнеса</li>
+                <li>Трудовые споры / Защита работодателя</li>
+                <li>Защита интеллектуальной собственности</li>
+                <li>Оптимизация налогооблажения</li>
+            </ul>      
+        </details>
+
+        <details open> 
+            <summary class="list_name">Обо мне</summary>      
+        </details>
+        
+        <p style="font-size: 20px;">Контакты</p>
+        <p>Телефон 77777777777 </p>
+        <p>Email somemail@mail.sru</p>
+
+        <hr>
+
+    </body>
+
+</html>
