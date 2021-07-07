@@ -11,11 +11,18 @@
         
         <script>    
         function load_rss(){
+            //load data from file
             const url_addr = '/nw.xml';
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url_addr);
             xhr.send();
-            document.write(xhr.response);
+            //parse data
+            var xmlDoc = xhr.responseXML;
+            var txt = "";
+            var items = xmlDoc.getElementsByTagName("rss").getElementsByTagName('chanel').getElementsByTagName('item');
+            for (i = 0; i < items.length; i++) {
+                txt += items[i].childNodes[0].nodeValue + "<br>";
+            }
         };
 
 
