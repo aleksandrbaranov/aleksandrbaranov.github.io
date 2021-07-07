@@ -11,11 +11,11 @@
         
         <script>    
         function load_rss(){
-            const url_addr = 'nw.xml';
+            const url_addr = '/nw.xml';
             const xhr = new XMLHttpRequest();
             xhr.open('GET', url_addr);
             xhr.send();
-            console.log(xhr.responseXML);
+            document.write(xhr.response);
         };
 
 
