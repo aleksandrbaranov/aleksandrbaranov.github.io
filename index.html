@@ -90,7 +90,7 @@
                 console.log(mydata.title[i]);
                 console.log(mydata.link[i]);
             }
-            document.write(mydata.title[0]);
+            document.getElementById('rss').innerHTML = mydata.title[0];
             /*let html_code = '';
             alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
