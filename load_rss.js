@@ -1,2 +1,2 @@
 var mydata = JSON.parse(data);
-alert(mydata.size);
+document.getElementById('rss_feeds').innerHTML = '<h3>' + mydata.title[0] + '</h3>';
