@@ -82,6 +82,7 @@
 
         <hr>
         
+        <h3>
         <script>
             var mydata = JSON.parse(data);
             
@@ -89,7 +90,7 @@
                 console.log(mydata.title[i]);
                 console.log(mydata.link[i]);
             }
-            
+            document.write(mydata.title[0]);
             /*let html_code = '';
             alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
@@ -98,7 +99,8 @@
             }*/
             
            // document.getElementById('rss').innerHTML = html_code;
-        </script>  
+        </script>
+        </h3>
     </body>
 
 </html>
