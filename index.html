@@ -85,7 +85,7 @@
         <script>
             var mydata = JSON.parse(data);
             var html_code = '';
-            
+            alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
                 alert('working');
                 html_code += '<h3><a href="'mydata.link[i] + '">'+ mydata.title[i] + '</a>' + '</h3>' + '<br>';   
