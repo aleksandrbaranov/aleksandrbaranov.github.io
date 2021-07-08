@@ -5,24 +5,12 @@
         <title>Юридическая помощь</title>
         <link rel="icon" href="logo.jpg">
         <link name="Keywords", content="Юрист, адвокат, помощь, консультация">
+        <script type="text/javascript" src="data.json"></script>
+        <script type="text/javascript" src="load_rss.js"></script>  
     </head>
 
     <body style="background-color: oldlace;">
-        
-        <script>    
-                   
-            const url_addr = '/data/data.txt';
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'json';
-            xhr.open('GET', url_addr, true);
-            xhr.onload = function() {
-                var js = xhr.response;                
-                document.getElementById('rss_feeds').innerHTML = js.title[0];
-            };
-            xhr.send(null);
-            
-    </script>
-
+       
         <style>
             header {
                 width: 100%;
