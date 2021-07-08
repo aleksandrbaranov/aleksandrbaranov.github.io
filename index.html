@@ -84,7 +84,13 @@
         
         <script>
             var mydata = JSON.parse(data);
-            document.getElementById('rss').innerHTML = 'qwerty';
+            var html_code = '';
+            
+            for(var i=0; i<mydata.size; i++){
+                html_code += '<h3><a href="'mydata.link[i] + '">'+ mydata.title[i] + '</a>' + '</h3>' + '<br>';   
+            }
+            
+            document.getElementById('rss').innerHTML = html_code;
         </script>  
     </body>
 
