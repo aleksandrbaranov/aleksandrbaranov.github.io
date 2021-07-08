@@ -84,7 +84,12 @@
         
         <script>
             var mydata = JSON.parse(data);
-            console.log(mydata.title[0]);
+            
+            for(var i=0; i<mydata.size; i++){
+                console.log(mydata.title[i]);
+                console.log(mydata.link[i]);
+            }
+            
             /*let html_code = '';
             alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
