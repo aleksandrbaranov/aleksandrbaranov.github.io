@@ -84,14 +84,15 @@
         
         <script>
             var mydata = JSON.parse(data);
-            let html_code = '';
+            console.log(mydata.size);
+            /*let html_code = '';
             alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
                 alert('working'); 
                 html_code += '<h3><a href="'String(mydata.link[i]) + '">'+ String(mydata.title[i]) + '</a>' + '</h3>' + '<br>';   
-            }
+            }*/
             
-            document.getElementById('rss').innerHTML = html_code;
+           // document.getElementById('rss').innerHTML = html_code;
         </script>  
     </body>
 
