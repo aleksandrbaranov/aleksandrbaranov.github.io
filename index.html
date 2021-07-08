@@ -87,18 +87,10 @@
             var mydata = JSON.parse(data);
             
             for(var i=0; i<mydata.size; i++){
-                console.log(mydata.title[i]);
-                console.log(mydata.link[i]);
+                document.getElementById('rss').innerHTML += '<p>' + mydata.title[i] + </p>;
             }
-            document.getElementById('rss').innerHTML = mydata.title[0];
-            /*let html_code = '';
-            alert(mydata.size);
-            for(var i=0; i<mydata.size; i++){
-                alert('working'); 
-                html_code += '<h3><a href="'String(mydata.link[i]) + '">'+ String(mydata.title[i]) + '</a>' + '</h3>' + '<br>';   
-            }*/
+            //document.getElementById('rss').innerHTML = mydata.title[0];
             
-           // document.getElementById('rss').innerHTML = html_code;
         </script>
         </h3>
     </body>
