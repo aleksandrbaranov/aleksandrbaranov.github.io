@@ -5,6 +5,7 @@
         <title>Юридическая помощь</title>
         <link rel="icon" href="logo.jpg">
         <link name="Keywords", content="Юрист, адвокат, помощь, консультация">
+        <script type="text/javascript" src="\data.json"></script>        
     </head>
 
     <body style="background-color: oldlace;">
@@ -81,10 +82,9 @@
 
         <hr>
         
-        <script type="text/javascript" src="\data.json"></script>        
         <script>
             var mydata = JSON.parse(data);
-            var html_code = '';
+            let html_code = '';
             alert(mydata.size);
             for(var i=0; i<mydata.size; i++){
                 alert('working');
